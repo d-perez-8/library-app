@@ -4,11 +4,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Library Project</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <h1>Create Your VERY OWN Todolist!</h1>
-    <a href="/login"> Login</a>
-    <a href="/signup"> Signup</a>
+    <nav>
+        <h1>Library</h1>
+        <h1>Create Your VERY OWN Todolist!</h1>
+        <a href="/login"> Login</a>
+        <a href="/signup"> Signup</a>
+    </nav>
+    <main>
+        <section class="library">
+        </section>
+        <!-- A button to open the popup form -->
+        <button class="open-button">+</button>
+
+        <!-- The form -->
+        <div class="form-popup" id="myForm">
+            <form class="form-container" id="addBookForm">
+                <h1>Enter Book Info</h1>
+
+                <label for="title"><p>Title</p></label>
+                <input type="text" id="title" placeholder="Enter Title" name="title" required>
+
+                <label for="author"><p>Author</p></label>
+                <input type="text" id="author" placeholder="Enter Author's Name" name="author" required>
+
+                <label for="pages"><p>Number of Pages</p></label>
+                <input type="text" id="pages" placeholder="Enter Page Count" name="pages" required>
+
+                <div class="is-read">
+                    <label for="is-read">Have you read it?</label>
+                    <input class="checkbox" type="checkbox" id="is-read" />
+                </div>
+
+                <button type="submit" class="btn btn-light-green">Add Book to Your Library</button>
+                <button class="btn cancel">Cancel</button>
+            </form>
+        </div>
+    </main>
+    
+
+    <script src="js/script.js"></script>
 </body>
 </html>
