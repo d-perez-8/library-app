@@ -13,7 +13,7 @@ const todoRoutes = require("./routes/todos");
 require("dotenv").config({ path: "./config/.env" });
 
 // Passport config
-require("./config/passport")(passport);
+const passportConfig = require('./config/passport')
 
 connectDB();
 
