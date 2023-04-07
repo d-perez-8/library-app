@@ -1,0 +1,14 @@
+
+Hope you enjoy your new logo, here are the people that
+made your beautiful logo happen :)
+font name: officecodepro-medium
+font link: https://github.com/nathco/Office-Code-Pro
+font author: Nathan Rutzky
+font author site: https://nath.co/
+Slogan Font: LindenHill-webfont.ttf
+
+icon designer: Les vieux garçons
+icon designer link: /enrique427
+        
+{"bg":"#E3CFB5","icon":"#776957","font":"#ffffff","slogan":"#ffffff"}
+      
