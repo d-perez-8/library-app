@@ -153,3 +153,8 @@ main {
 .open-button:hover {
   opacity: 1;
 }
+
+/* When book is completed */
+.completed {
+  color: grey;
+}

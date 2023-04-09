@@ -1,16 +1,16 @@
-const Todo = require("../models/Todo");
+const Library = require("../models/Library");
 
 module.exports = {
-  getTodos: async (req, res) => {
+  getLibrary: async (req, res) => {
     console.log(req.user);
     try {
-      const todoItems = await Todo.find({ userId: req.user.id });
-      const itemsLeft = await Todo.countDocuments({
+      const bookItems = await Library.find({ userId: req.user.id });
+      const itemsLeft = await Library.countDocuments({
         userId: req.user.id,
         completed: false,
       });
-      res.render("todos.ejs", {
-        todos: todoItems,
+      res.render("library.ejs", {
+        books: bookItems,
         left: itemsLeft,
         user: req.user,
       });
@@ -18,22 +18,23 @@ module.exports = {
       console.log(err);
     }
   },
-  createTodo: async (req, res) => {
+  createBook: async (req, res) => {
     try {
-      await Todo.create({
-        todo: req.body.todoItem,
+      console.log(req.body)
+      await Library.create({
+        book: req.body.todoItem,
         completed: false,
         userId: req.user.id,
       });
-      console.log("Todo has been added!");
-      res.redirect("/todos");
+      console.log("Book has been added!");
+      res.redirect("/library");
     } catch (err) {
       console.log(err);
     }
   },
   markComplete: async (req, res) => {
     try {
-      await Todo.findOneAndUpdate(
+      await Library.findOneAndUpdate(
         { _id: req.body.todoIdFromJSFile },
         {
           completed: true,
@@ -47,7 +48,7 @@ module.exports = {
   },
   markIncomplete: async (req, res) => {
     try {
-      await Todo.findOneAndUpdate(
+      await Library.findOneAndUpdate(
         { _id: req.body.todoIdFromJSFile },
         {
           completed: false,
@@ -59,11 +60,11 @@ module.exports = {
       console.log(err);
     }
   },
-  deleteTodo: async (req, res) => {
+  deleteBook: async (req, res) => {
     console.log(req.body.todoIdFromJSFile);
     try {
-      await Todo.findOneAndDelete({ _id: req.body.todoIdFromJSFile });
-      console.log("Deleted Todo");
+      await Library.findOneAndDelete({ _id: req.body.todoIdFromJSFile });
+      console.log("Deleted Book");
       res.json("Deleted It");
     } catch (err) {
       console.log(err);
