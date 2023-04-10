@@ -22,7 +22,9 @@ module.exports = {
     try {
       console.log(req.body)
       await Library.create({
-        book: req.body.todoItem,
+        bookTitle: req.body.title,
+        bookAuthor: req.body.author,
+        bookPages: req.body.pages,
         completed: false,
         userId: req.user.id,
       });

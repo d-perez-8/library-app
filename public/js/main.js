@@ -67,3 +67,7 @@ async function markIncomplete() {
     console.log(err);
   }
 }
+
+$('#myModal').on('shown.bs.modal', function () {
+  $('#myInput').trigger('focus')
+})
