@@ -42,7 +42,7 @@ module.exports = {
           completed: true,
         }
       );
-      console.log("Marked Complete");
+      console.log("Marked Complete", req.body);
       res.json("Marked Complete");
     } catch (err) {
       console.log(err);

@@ -1,0 +1,14 @@
+.completed{
+    text-decoration: line-through;
+    color: gray;
+}
+
+.todoItem > *:hover, 
+.del:hover {
+    cursor: pointer;
+}
+
+li {
+    list-style: none;
+}
+
