@@ -7,29 +7,32 @@
                 <div class="alert alert-danger"><%= el.msg %></div>
             <% }) %>
         <% } %>
-        <div>
-            <h1 class="col-md-10 mx-auto col-lg-5 display-4">Sign Up</h1>
-        </div> 
         <div class="col-md-10 mx-auto col-lg-5">
-            <form action="/signup" method="POST" class="p-4 p-md-5 border rounded-3 bg-body-tertiary border border-primary">
-                <div class="form-floating mb-3">
-                    <input type="text" name="userName" class="form-control" id="floatingInput">
-                    <label for="floatingInput" >Username</label>
-                </div>
-                <div class="form-floating mb-3">
-                    <input type="email" name="email" class="form-control" id="floatingInput">
-                    <label for="floatingInput">Email</label>
-                </div>
-                <div class="form-floating mb-3">
-                    <input type="password" class="form-control" id="floatingPassword" name="password">
-                    <label for="floatingPassword">Password</label>
-                </div>
-                <div class="form-floating mb-3">
-                    <input type="password" class="form-control" id="floatingPassword" name="confirmPassword">
-                    <label for="floatingPassword">Confirm Password</label>
-                </div>
-                <button type="submit" class="btn btn-primary">Sign In</button>
-            </form>
+            <h1 class="">Sign Up</h1>
+            <div class="">
+                <form action="/signup" method="POST" class="p-4 p-md-5 border rounded-3 bg-body-tertiary border border-primary">
+                    <div class="form-floating mb-3">
+                        <label for="floatingInput" >Username</label>
+                        <input type="text" name="userName" class="form-control" id="floatingInput"
+                        placeholder="John Doe">
+                        
+                    </div>
+                    <div class="form-floating mb-3">
+                        <label for="floatingInput">Email</label>
+                        <input type="email" name="email" class="form-control" id="floatingInput"
+                        placeholder="jon@doe.com">
+                    </div>
+                    <div class="form-floating mb-3">
+                        <label for="floatingPassword">Password</label>
+                        <input type="password" class="form-control" id="floatingPassword" name="password">
+                    </div>
+                    <div class="form-floating mb-3">
+                        <label for="floatingPassword">Confirm Password</label>
+                        <input type="password" class="form-control" id="floatingPassword" name="confirmPassword">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Sign In</button>
+                </form>
+            </div>
         </div>
     </div>
 

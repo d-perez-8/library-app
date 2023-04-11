@@ -1,7 +1,7 @@
 <%- include('partials/header') -%>
 
 <body>
-    <h1>Library</h1>
+    <h1 class="display-5 fw-bold text-body-emphasis pl-2 pt-2">Library</h1>
     <ul class="row p-2">
     <% books.forEach( el => { %>
             <li class='todoItem col-sm-4' data-id='<%=el._id%>'>
@@ -21,10 +21,10 @@
     <% }) %>    
     </ul>
 
-    <h2><%= user.userName %> has <%= left %> books left to read!</h2>
+    <h2 class="display-5 fw-bold text-body-emphasis pl-2 pt-2"><%= user.userName %> has <%= left %> books left to read!</h2>
 
     <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addBookModal">
+    <button type="button" class="btn btn-primary mb-3 ml-3" data-toggle="modal" data-target="#addBookModal">
     Add Book
     </button>
   
@@ -68,6 +68,6 @@
         </div>
     </div>
 
-    <a href="/logout"> <button type="button" class="btn btn-outline-secondary px-4">Logout</button></a>
+    <a href="/logout"> <button type="button" class="btn btn-outline-secondary px-4 mb-3 ml-3">Logout</button></a>
 
 <%- include('partials/footer') -%>
