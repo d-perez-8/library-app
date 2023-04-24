@@ -64,7 +64,7 @@ module.exports = {
   },
   deleteBook: async (req, res) => {
     console.log(req.body.todoIdFromJSFile);
-    try {
+      try {
       await Library.findOneAndDelete({ _id: req.body.todoIdFromJSFile });
       console.log("Deleted Book");
       res.json("Deleted It");

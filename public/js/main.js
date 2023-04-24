@@ -1,9 +1,9 @@
 const deleteBtn = document.querySelectorAll(".del");
-const todoItem = document.querySelectorAll("span.not");
-const todoComplete = document.querySelectorAll("span.completed");
+const todoItem = document.querySelectorAll(".not");
+const todoComplete = document.querySelectorAll(".completed");
 
 Array.from(deleteBtn).forEach((el) => {
-  el.addEventListener("click", deleteTodo);
+  el.addEventListener("click", deleteBook);
 });
 
 Array.from(todoItem).forEach((el) => {
@@ -14,8 +14,8 @@ Array.from(todoComplete).forEach((el) => {
   el.addEventListener("click", markIncomplete);
 });
 
-async function deleteTodo() {
-  const todoId = this.parentNode.dataset.id;
+async function deleteBook() {
+  const todoId = this.parentNode.parentNode.parentNode.parentNode.dataset.id;
   try {
     const response = await fetch("library/deleteBook", {
       method: "delete",
