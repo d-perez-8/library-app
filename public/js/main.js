@@ -15,7 +15,7 @@ Array.from(todoComplete).forEach((el) => {
 });
 
 async function deleteBook() {
-  const todoId = this.parentNode.parentNode.parentNode.parentNode.dataset.id;
+  const todoId = this.parentNode.parentNode.parentNode.parentNode.parentNode.dataset.id;
   try {
     const response = await fetch("library/deleteBook", {
       method: "delete",
